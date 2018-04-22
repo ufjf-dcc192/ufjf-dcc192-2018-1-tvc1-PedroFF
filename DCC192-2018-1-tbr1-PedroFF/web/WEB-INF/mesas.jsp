@@ -16,7 +16,7 @@
         <tr>
             <td><%= mesa.getNumMesa()%></td>
             <%for(int i = 0; i<ListaDeMesas.getInstance().size(); i++){%>
-            <td><a href="pedidos.jsp?mesa=<%=i%>"><%= mesa.getPedidos().size()%></a></td>
+            <td><a href="pedido.html?mesa=<%=i%>"><%= mesa.getPedidos().size()%></a></td>
             <%}%>
             <td><%= mesa.getStatus()?"Aberta":"Fechada"%></td>
 

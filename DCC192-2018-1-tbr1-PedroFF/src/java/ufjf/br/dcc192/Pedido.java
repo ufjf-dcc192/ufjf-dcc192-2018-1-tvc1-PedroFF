@@ -19,14 +19,11 @@ public class Pedido {
     private boolean conta; // enquanto for true, podem ser adicionados mais itens ao pedido.
     private double valorFinal;
     
-    public Pedido(int numPedido) {
-        this.numPedido = numPedido;
+    public Pedido() {
+        this.numPedido = numPedido++;
         horaAbriu = horaAbertura.toString();
         this.descricao = "Descrição do Pedido";
         this.conta = true;
-    }
-
-    public Pedido() {
     }
     
 
@@ -38,7 +35,7 @@ public class Pedido {
         this.itens = itens;
     }
 
-    public boolean isConta() {
+    public boolean getConta() {
         return conta;
     }
 
@@ -85,8 +82,5 @@ public class Pedido {
     void acrescentaFinal(Double preco, Pedido p1){
         p1.setValorFinal(p1.getValorFinal() + preco);
     }
-    
-    
-    
 }
 

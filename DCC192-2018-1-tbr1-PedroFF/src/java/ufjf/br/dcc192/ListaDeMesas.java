@@ -11,6 +11,7 @@ public class ListaDeMesas {
         if (mesas == null) {
             mesas = new ArrayList<>();
             mesas.add(new Mesa());
+            mesas.get(0).setPedidos(new ArrayList<>());
             return mesas;
         }
         return mesas;

@@ -8,7 +8,7 @@ import java.util.List;
 public class Mesa {
 
     private int numMesa = 0; //essa variável vai controlar o fluxo de mesas.
-    private List<Pedido> pedidos; // essa lista vai controlar os pedidos por mesa.
+    private ArrayList<Pedido> pedidos; // essa lista vai controlar os pedidos por mesa.
     private boolean status;
     public Mesa() {
         this.numMesa++;
@@ -29,11 +29,11 @@ public class Mesa {
         return "Mesa "+ this.numMesa;
     }
 
-    public List<Pedido> getPedidos() {
+    public ArrayList<Pedido> getPedidos() {
         return pedidos;
     }
 
-    public void setPedidos(List<Pedido> pedidos) {
+    public void setPedidos(ArrayList<Pedido> pedidos) {
         this.pedidos = pedidos;
     }
 
