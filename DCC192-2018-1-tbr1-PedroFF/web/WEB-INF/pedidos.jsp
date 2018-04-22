@@ -2,7 +2,7 @@
 <%@page import="java.util.ArrayList"%>
 <%@page import="ufjf.br.dcc192.Mesa"%>
 <%@include file="jspf/cabecalho.jspf" %>
-  <%Mesa mesa = (Mesa)request.getAttribute("mesa");
+      <%Mesa mesa = (Mesa) request.getAttribute("mesa");
     ArrayList<Pedido> pedidos = new ArrayList<>();
     pedidos = mesa.getPedidos();
   %>
@@ -18,12 +18,12 @@
           <tr>
               <td><%=pedidos.indexOf(i)%></td>
               <td><%=pedidos.get(i).getConta()?"Aberta":"Fechada"%></td>
-              <td><a href="editar-pedido.html">Editar Pedido</a></td>
+              <td><a href="editar-pedido.html?pedido=<%=i%>">Editar Pedido</a></td>
               <td><a href="fechar-pedido.html">Fechar Pedido</a></td>
           </tr>
           <%}%>
           <tr>
-              <td colspan="2"><a href="novo-pedido.html">Novo Pedido</a></td>
+              <td colspan="4"><a href="novo-pedido.html">Novo Pedido</a></td>
           </tr>
           
       </tbody>
