@@ -21,7 +21,7 @@
         <%for (int i = 0; i < pedidos.size(); i++) {%>
         <tr>
             <td><%=i+1%></td>
-            <td><%=pedidos.get(i).getConta() ? "Aberta" : "Fechada"%></td>
+            <td><%=pedidos.get(i).getConta() ? "Aberto" : "Fechado"%></td>
             <td><a href="editar-pedido.html?mesa=<%= ListaDeMesas.getInstance().indexOf(mesa) %>&pedido=<%=i%>">Editar Pedido</a></td>
             <td><a href="fechar-pedido.html?mesa=<%= ListaDeMesas.getInstance().indexOf(mesa) %>&pedido=<%=i%>">Fechar Pedido</a></td>
             <td><a href="relatorio-pedido.html?mesa=<%= ListaDeMesas.getInstance().indexOf(mesa) %>&pedido=<%=i%>">Ver Pedido</a></td>

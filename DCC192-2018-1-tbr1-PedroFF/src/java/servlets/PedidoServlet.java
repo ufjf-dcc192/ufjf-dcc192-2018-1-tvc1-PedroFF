@@ -29,8 +29,13 @@ public class PedidoServlet extends HttpServlet {
             Pedido pedido = mesa.getPedidos().get(Integer.parseInt(request.getParameter("pedido")));
             request.setAttribute("mesa", mesa);
             request.setAttribute("pedido", pedido);
+            if(pedido.getConta()==false){
+                RequestDispatcher despachante = request.getRequestDispatcher("/WEB-INF/relatorio-pedido.jsp");
+                despachante.forward(request, resp);
+            }else{
             RequestDispatcher despachante = request.getRequestDispatcher("/WEB-INF/editar-pedido.jsp");
             despachante.forward(request, resp);
+            }
         } else if ("/novo-pedido.html".equals(request.getServletPath())) {
             Mesa mesa = ListaDeMesas.getInstance().get(Integer.parseInt(request.getParameter("mesa")));
             request.setAttribute("mesa", mesa);

@@ -9,7 +9,6 @@
         <tr>
             <th scope="col">Mesa</th>
             <th scope="col">Pedidos</th>
-            <th scope="col">Status Mesa</th>
         </tr>
     </thead>
     <tbody>
