@@ -4,15 +4,26 @@
 <html>
     <head>    
         <title>BOATE</title>
-        <link rel="stylesheet" href="css/main.css"/>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
     </head>
     <body>
 <header>
+    <div class="card text-center">
+  <div class="card-header">
     <h2>Boate da noite!</h2>
+  </div>
 </header>
-<aside>
-    <menu>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="mesas.html">Mesas</a></li>
-    </menu>
-</aside>
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+  <a class="navbar-brand" href="index.html">Boate da Noite</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarText">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item">
+        <a class="nav-link" href="mesas.html">Mesas</a>
+      </li>
+    </ul>
+  </div>
+</nav>

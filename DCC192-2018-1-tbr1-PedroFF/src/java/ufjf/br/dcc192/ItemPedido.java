@@ -1,32 +1,31 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package ufjf.br.dcc192;
 
-/**
- *
- * @author pedrofreitas
- */
+import java.util.ArrayList;
+
 public class ItemPedido {
-    private String nome;
+    private Item item;
     private int quantidade;
-
-    public ItemPedido() {
+    private static ArrayList<Item> itens;
+    
+    public static ArrayList<Item> getItens(){
+        if(itens == null){
+            itens = new ArrayList<>();
+            itens.add(new Item(" Refri Lata ", 6.0));
+            itens.add(new Item(" RedBull ", 12.0));
+            itens.add(new Item(" Smirnoff ICE ", 8.0));
+            itens.add(new Item(" Skol Beats ", 9.0));
+            itens.add(new Item(" Vodka Orloff ", 50.0));
+            itens.add(new Item(" Combo Vodka + Energético ", 70.0));
+            itens.add(new Item(" Dose Tequila ", 30.0));
+            return itens;
+        }
+        return itens;
     }
 
-    public ItemPedido(String nome, int quantidade) {
-        this.nome = nome;
+    public ItemPedido(Item item, int quantidade) {
+        this.item = item;
         this.quantidade = quantidade;
-    }
-
-    public String getNome() {
-        return nome;
-    }
-
-    public void setNome(String nome) {
-        this.nome = nome;
     }
 
     public int getQuantidade() {
@@ -39,8 +38,7 @@ public class ItemPedido {
 
     @Override
     public String toString() {
-        return   " Nome: " + nome + "|| Quantidade: " + quantidade +" ";
-        
+        return   " Nome: " + item.getNome() + "|| Quantidade: " + quantidade +" ";    
     }
     
     

@@ -4,6 +4,7 @@ package ufjf.br.dcc192;
 import java.time.LocalDateTime;
 import java.time.LocalTime;
 import java.time.format.DateTimeFormatter;
+import java.util.ArrayList;
 import java.util.List;
 import javafx.util.converter.LocalDateTimeStringConverter;
 
@@ -14,24 +15,23 @@ public class Pedido {
     private String horaFechou;
     private LocalTime horaFechamento;
     private int numPedido = 0;
-    private List<Produto> itens;
-    private String descricao;
+    private List<ItemPedido> itens = new ArrayList<>();
     private boolean conta; // enquanto for true, podem ser adicionados mais itens ao pedido.
     private double valorFinal;
     
-    public Pedido() {
+    public Pedido(ItemPedido itemPedido) {
         this.numPedido = numPedido++;
         horaAbriu = horaAbertura.toString();
-        this.descricao = "Descrição do Pedido";
         this.conta = true;
+        itens.add(itemPedido);
     }
     
 
-    public List<Produto> getProduto() {
+    public List<ItemPedido> getItensProduto() {
         return itens;
     }
 
-    public void setItens(List<Produto> itens) {
+    public void setItensProduto(List<ItemPedido> itens) {
         this.itens = itens;
     }
 

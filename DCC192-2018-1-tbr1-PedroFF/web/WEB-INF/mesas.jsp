@@ -3,22 +3,23 @@
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@page import="ufjf.br.dcc192.ListaDeMesas"%>
 <%@include file="jspf/cabecalho.jspf" %>
-<table border="1">
+
+<table class="table table-striped">
     <thead>
         <tr>
-            <th>Mesa</th>
-            <th>Pedidos</th>
-            <th>Status mesa</th>
+            <th scope="col">Mesa</th>
+            <th scope="col">Pedidos</th>
+            <th scope="col">Status Mesa</th>
         </tr>
     </thead>
     <tbody>
         <% for (Mesa mesa : ListaDeMesas.getInstance()) {%>        
         <tr>
             <td><%= mesa.getNumMesa()%></td>
-            <%for(int i = 0; i<ListaDeMesas.getInstance().size(); i++){%>
+            <%for (int i = 0; i < ListaDeMesas.getInstance().size(); i++) {%>
             <td><a href="pedido.html?mesa=<%=i%>"><%= mesa.getPedidos().size()%></a></td>
-            <%}%>
-            <td><%= mesa.getStatus()?"Aberta":"Fechada"%></td>
+                <%}%>
+            <td><%= mesa.getStatus() ? "Aberta" : "Fechada"%></td>
 
         </tr>
         <%}%>
