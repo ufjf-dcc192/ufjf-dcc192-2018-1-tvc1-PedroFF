@@ -22,8 +22,10 @@ public class Inicial extends HttpServlet {
         } else if ("/mesas.html".equals(request.getServletPath())) {
             RequestDispatcher despachante = request.getRequestDispatcher("/WEB-INF/mesas.jsp");
             despachante.forward(request, resp);
-        }else if ("/nova-mesas.html".equals(request.getServletPath())) {
+        }else if ("/nova-mesa.html".equals(request.getServletPath())) {
             ListaDeMesas.getInstance().add(new Mesa());
+            RequestDispatcher despachante = request.getRequestDispatcher("/WEB-INF/mesas.jsp");
+            despachante.forward(request, resp);
         }
     }
 
