@@ -9,9 +9,6 @@ public class Item {
         this.preco = preco;
     }
 
-    public Item() {
-    }
-
     public String getNome() {
         return nome;
     }

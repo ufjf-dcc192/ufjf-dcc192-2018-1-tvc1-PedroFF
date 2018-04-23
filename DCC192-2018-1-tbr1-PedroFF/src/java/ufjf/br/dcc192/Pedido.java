@@ -12,7 +12,6 @@ import javafx.util.converter.LocalDateTimeStringConverter;
 public class Pedido {
     private LocalTime horaAbertura = LocalTime.now();
     private String horaAbriu;
-    private String horaFechou;
     private LocalTime horaFechamento;
     private int numPedido = 0;
     private List<ItemPedido> itens = new ArrayList<>();
@@ -24,6 +23,7 @@ public class Pedido {
         horaAbriu = horaAbertura.toString();
         this.conta = true;
         itens.add(itemPedido);
+        this.acrescentaFinal((itemPedido.getQuantidade()*itemPedido.getItem().getPreco()), this);
     }
     
 
@@ -79,7 +79,7 @@ public class Pedido {
         this.valorFinal = valorFinal;
     }
     
-    void acrescentaFinal(Double preco, Pedido p1){
+    public void acrescentaFinal(Double preco, Pedido p1){
         p1.setValorFinal(p1.getValorFinal() + preco);
     }
 }

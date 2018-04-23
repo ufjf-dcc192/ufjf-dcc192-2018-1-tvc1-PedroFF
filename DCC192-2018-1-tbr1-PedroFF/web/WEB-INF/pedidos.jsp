@@ -14,6 +14,7 @@
             <th scope="col">Status</th>
             <th scope="col">Edição de Pedido</th>
             <th scope="col">Fechar Pedido</th>
+            <th scope="col">Ver Pedido</th>
         </tr>
     </thead>
     <tbody>
@@ -22,11 +23,12 @@
             <td><%=i+1%></td>
             <td><%=pedidos.get(i).getConta() ? "Aberta" : "Fechada"%></td>
             <td><a href="editar-pedido.html?mesa=<%= ListaDeMesas.getInstance().indexOf(mesa) %>&pedido=<%=i%>">Editar Pedido</a></td>
-            <td><a href="fechar-pedido.html">Fechar Pedido</a></td>
+            <td><a href="fechar-pedido.html?mesa=<%= ListaDeMesas.getInstance().indexOf(mesa) %>&pedido=<%=i%>">Fechar Pedido</a></td>
+            <td><a href="relatorio-pedido.html?mesa=<%= ListaDeMesas.getInstance().indexOf(mesa) %>&pedido=<%=i%>">Ver Pedido</a></td>
         </tr>
         <%}%>
         <tr>
-            <td colspan="4"><a href="novo-pedido.html?mesa=<%= ListaDeMesas.getInstance().indexOf(mesa) %>">Novo Pedido</a></td>
+            <td colspan="5"><a href="novo-pedido.html?mesa=<%= ListaDeMesas.getInstance().indexOf(mesa) %>">Novo Pedido</a></td>
         </tr>
     </tbody>
 </table>

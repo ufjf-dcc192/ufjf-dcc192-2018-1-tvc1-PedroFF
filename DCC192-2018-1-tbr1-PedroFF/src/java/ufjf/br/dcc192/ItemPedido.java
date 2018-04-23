@@ -36,6 +36,14 @@ public class ItemPedido {
         this.quantidade = quantidade;
     }
 
+    public Item getItem() {
+        return item;
+    }
+
+    public void setItem(Item item) {
+        this.item = item;
+    }
+    
     @Override
     public String toString() {
         return   " Nome: " + item.getNome() + "|| Quantidade: " + quantidade +" ";    

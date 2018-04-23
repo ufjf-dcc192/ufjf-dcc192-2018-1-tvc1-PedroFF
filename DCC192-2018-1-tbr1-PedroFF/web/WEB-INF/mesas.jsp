@@ -20,9 +20,11 @@
             <td><a href="pedido.html?mesa=<%=i%>"><%= mesa.getPedidos().size()%></a></td>
                 <%}%>
             <td><%= mesa.getStatus() ? "Aberta" : "Fechada"%></td>
-
         </tr>
         <%}%>
+        <tr>
+            <td colspan="3"><a href="nova-mesa.html">Nova Mesa</a></td>
+        </tr>
     </tbody>
 </table>
 
