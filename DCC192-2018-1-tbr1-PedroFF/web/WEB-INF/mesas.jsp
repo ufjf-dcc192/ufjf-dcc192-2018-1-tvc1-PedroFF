@@ -15,15 +15,12 @@
     <tbody>
         <% for (Mesa mesa : ListaDeMesas.getInstance()) {%>        
         <tr>
-            <td><%=ListaDeMesas.getInstance().indexOf(mesa)+1 %></td>
-            
-            <td><a href="pedido.html?mesa=<%=ListaDeMesas.getInstance().indexOf(mesa) %>"><%= mesa.getPedidos().size()%></a></td>
-            
-            <td><%= mesa.getStatus() ? "Aberta" : "Fechada"%></td>
+            <td><%=ListaDeMesas.getInstance().indexOf(mesa) + 1%></td>
+            <td><a href="pedido.html?mesa=<%=ListaDeMesas.getInstance().indexOf(mesa)%>"><%= mesa.getPedidos().size()%></a></td>
         </tr>
         <%}%>
         <tr>
-            <td colspan="3"><a href="nova-mesa.html">Nova Mesa</a></td>
+            <td colspan="2"><a href="nova-mesa.html">Nova Mesa</a></td>
         </tr>
     </tbody>
 </table>
