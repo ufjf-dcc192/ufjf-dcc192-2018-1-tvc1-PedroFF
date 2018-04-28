@@ -51,7 +51,7 @@ public class InscricoesServlet extends HttpServlet {
             nome = req.getParameter("nome");
             disp = req.getParameter("disp");
             ListaDeAnfitriao.getInstance().add(new Anfitriao(nome, cat, disp, email));
-            response.sendRedirect("index.jsp");
+            response.sendRedirect("index.html");
         } else {
             String pais, nome, est, email;
             pais = req.getParameter("pais");
@@ -59,7 +59,7 @@ public class InscricoesServlet extends HttpServlet {
             nome = req.getParameter("nome");
             est = req.getParameter("est");
             ListaDeIntercambista.getInstance().add(new Intercambista(nome, pais, est, email));
-            response.sendRedirect("index.jsp");
+            response.sendRedirect("index.html");
         }
     }
 
