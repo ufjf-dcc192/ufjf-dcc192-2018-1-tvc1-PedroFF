@@ -1,7 +1,7 @@
 <%@page import="ufjf.br.dcc192.Anfitriao"%>
 <%@page import="ufjf.br.dcc192.ListaDeAnfitriao"%>
 <%@include file="jspf/cabecalho.jspf" %>
-<form>
+<form method="post">
     <div class="form-group">
         <label>Nome: </label>
         <input type="text" class="form-control" required="required" name="nome" placeholder="Digite seu Nome">
