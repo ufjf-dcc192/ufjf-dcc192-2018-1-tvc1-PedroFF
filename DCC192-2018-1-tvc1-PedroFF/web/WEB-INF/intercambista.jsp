@@ -1,12 +1,16 @@
 <%@include file="jspf/cabecalho.jspf" %>
-    <form>
+<form>
     <div class="form-group">
         <label>Nome: </label>
         <input type="text" class="form-control" required="required" name="nome" placeholder="Digite seu Nome">
     </div>
     <div class="form-group">
-            <label>País: </label>
-            <input type="text" class="form-control" required="required" name="pais" placeholder="Digite seu país">
+        <label>Email: </label>
+        <input type="email" class="form-control" required="required" name="email" placeholder="Digite seu email">
+    </div>
+    <div class="form-group">
+        <label>País: </label>
+        <input type="text" class="form-control" required="required" name="pais" placeholder="Digite seu país">
     </div>
     <div class="form-group">
         <label>Tempo de estadia: </label>

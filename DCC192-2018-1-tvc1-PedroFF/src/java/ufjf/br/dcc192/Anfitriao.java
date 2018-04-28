@@ -5,11 +5,13 @@ public class Anfitriao {
     String nome;
     String categoria;
     String possibilidadeDeEstadia;
+    String email;
 
-    public Anfitriao(String nome, String categoria, String possibilidadeDeEstadia) {
+    public Anfitriao(String nome, String categoria, String possibilidadeDeEstadia, String email) {
         this.nome = nome;
         this.categoria = categoria;
         this.possibilidadeDeEstadia = possibilidadeDeEstadia;
+        this.email = email;
     }
 
     public String getNome() {

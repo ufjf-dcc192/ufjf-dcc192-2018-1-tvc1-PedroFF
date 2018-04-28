@@ -22,7 +22,7 @@ import ufjf.br.dcc192.ListaDeIntercambista;
  *
  * @author Pedro
  */
-@WebServlet(name = "InscricoesServlet", urlPatterns = {"/inscricoes.html", "/anfitriao.html", "/intercambista.html","compatibilidades.html"})
+@WebServlet(name = "InscricoesServlet", urlPatterns = {"/inscricoes.html", "/anfitriao.html", "/intercambista.html", "/compatibilidades.html"})
 public class InscricoesServlet extends HttpServlet {
 
     @Override
@@ -36,29 +36,31 @@ public class InscricoesServlet extends HttpServlet {
         } else if ("/anfitriao.html".equals(request.getServletPath())) {
             RequestDispatcher despachante = request.getRequestDispatcher("/WEB-INF/anfitriao.jsp");
             despachante.forward(request, response);
-        }else if ("/compatibilidades.html".equals(request.getServletPath())) {
+        } else if ("/compatibilidades.html".equals(request.getServletPath())) {
             RequestDispatcher despachante = request.getRequestDispatcher("/WEB-INF/compatibilidades.jsp");
             despachante.forward(request, response);
         }
     }
 
     @Override
-    protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+    protected void doPost(HttpServletRequest req, HttpServletResponse response) throws ServletException, IOException {
         if ("anfitriao".equals(req.getParameter("anfitriao"))) {
-            String cat,nome,disp;
+            String cat, nome, disp, email;
             cat = req.getParameter("cat");
+            email = req.getParameter("email");
             nome = req.getParameter("nome");
             disp = req.getParameter("disp");
-            ListaDeAnfitriao.getInstance().add(new Anfitriao(nome, cat, disp));
-            resp.sendRedirect("index.html");
-        }else{
-            String pais,nome,est;
+            ListaDeAnfitriao.getInstance().add(new Anfitriao(nome, cat, disp, email));
+            response.sendRedirect("index.jsp");
+        } else {
+            String pais, nome, est, email;
             pais = req.getParameter("pais");
+            email = req.getParameter("email");
             nome = req.getParameter("nome");
             est = req.getParameter("est");
-            ListaDeIntercambista.getInstance().add(new Intercambista(nome, pais, est));
-            resp.sendRedirect("index.html");
+            ListaDeIntercambista.getInstance().add(new Intercambista(nome, pais, est, email));
+            response.sendRedirect("index.jsp");
         }
     }
-    
+
 }

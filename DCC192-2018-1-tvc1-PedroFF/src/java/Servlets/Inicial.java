@@ -18,6 +18,5 @@ public class Inicial extends HttpServlet {
             RequestDispatcher despachante = request.getRequestDispatcher("/WEB-INF/index.jsp");
             despachante.forward(request, response);
         }
-
     }
 }

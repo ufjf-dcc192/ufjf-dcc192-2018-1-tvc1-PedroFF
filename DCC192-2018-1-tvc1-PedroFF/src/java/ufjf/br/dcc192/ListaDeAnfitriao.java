@@ -9,7 +9,7 @@ public class ListaDeAnfitriao {
     public static List<Anfitriao> getInstance() {
         if (anfitrioes == null) {
             anfitrioes = new ArrayList<>();
-            anfitrioes.add(new Anfitriao("Pedro","Discente","2 semanas"));
+            anfitrioes.add(new Anfitriao("Pedro","Discente","2 semanas","soufreitas.pedro@gamil.com"));
             return anfitrioes;
         }
         return anfitrioes;

@@ -1,15 +1,17 @@
 package ufjf.br.dcc192;
 
-
 public class Intercambista {
+
     String nome;
     String paisOrigem;
     String tempoEstadia;
+    String email;
 
-    public Intercambista(String nome, String paisOrigem, String tempoEstadia) {
+    public Intercambista(String nome, String paisOrigem, String tempoEstadia, String email) {
         this.nome = nome;
         this.paisOrigem = paisOrigem;
         this.tempoEstadia = tempoEstadia;
+        this.email = email;
     }
 
     public String getNome() {
@@ -35,6 +37,5 @@ public class Intercambista {
     public void setTempoEstadia(String tempoEstadia) {
         this.tempoEstadia = tempoEstadia;
     }
-    
-    
+
 }

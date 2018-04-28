@@ -9,7 +9,7 @@ public class ListaDeIntercambista {
     public static List<Intercambista> getInstance() {
         if (intercambistas == null) {
             intercambistas = new ArrayList<>();
-            intercambistas.add(new Intercambista("Suarez","Uruguai","2 semanas"));
+            intercambistas.add(new Intercambista("Suarez","Uruguai","2 semanas","suarez@gmail.com"));
             return intercambistas;
         }
         return intercambistas;

@@ -7,6 +7,10 @@
         <input type="text" class="form-control" required="required" name="nome" placeholder="Digite seu Nome">
     </div>
     <div class="form-group">
+        <label>Email: </label>
+        <input type="email" class="form-control" required="required" name="email" placeholder="Digite seu email">
+    </div>
+    <div class="form-group">
             <label>Categoria: </label>
             <input type="text" class="form-control" required="required" name="cat" placeholder="Docente/Discente/TAE/Tercerizado">
     </div>
