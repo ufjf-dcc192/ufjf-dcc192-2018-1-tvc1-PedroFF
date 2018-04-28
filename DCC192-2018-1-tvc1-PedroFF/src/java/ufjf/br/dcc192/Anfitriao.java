@@ -37,6 +37,15 @@ public class Anfitriao {
     public void setPossibilidadeDeEstadia(String possibilidadeDeEstadia) {
         this.possibilidadeDeEstadia = possibilidadeDeEstadia;
     }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
+    
     
     
 }

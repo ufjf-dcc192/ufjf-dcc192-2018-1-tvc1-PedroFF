@@ -10,7 +10,8 @@
                 if (ListaDeIntercambista.getInstance().get(i).getTempoEstadia().equals(ListaDeAnfitriao.getInstance().get(j).getPossibilidadeDeEstadia())) {
     %>
     <li class="list-group-item"><%=ListaDeAnfitriao.getInstance().get(j).getNome()%> pode hospedar <%=ListaDeIntercambista.getInstance().get(i).getNome()%></li>
-
+    <li class="list-group-item">Email do anfitrião: <%=ListaDeAnfitriao.getInstance().get(j).getEmail()%></li>
+    <li class="list-group-item">Email do intercambista: <%=ListaDeIntercambista.getInstance().get(i).getEmail()%></li>
     <%
                 }
                 j++;
